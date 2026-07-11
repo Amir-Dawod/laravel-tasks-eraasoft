@@ -4,10 +4,17 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+// form image
 Route::get('form-image', function () {
     return view('upload-image');
 });
+
+// image controller
 Route::post('/upload-image', [ImageController::class,"upload"])->name("image.upload");
+
+
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
